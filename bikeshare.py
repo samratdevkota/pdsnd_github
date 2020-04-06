@@ -171,13 +171,13 @@ def user_stats(df):
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
-    try:
+    try:  # handle errors and exception
         earliest_birth = df['Birth Year'].min()
         print("Earliest year of birth is", earliest_birth)
     except KeyError:
         print("Birth data is not available")
         
-    try:
+    try:  
         recent_birth = df['Birth Year'].max()
         print("Most recent year of birth is", recent_birth)
     except:
@@ -194,7 +194,7 @@ def user_stats(df):
     print('-'*40)
     x = 1
     
-    while True:
+    while True:  # ask for raw data and provide if user wants to view some
         raw = input('\nWould you like to see some raw data? Enter yes or no.\n')
         if raw.lower() == 'yes':
             print(df[x:x+5])
