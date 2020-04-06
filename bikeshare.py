@@ -57,8 +57,8 @@ def load_data(city, month, day):
     
     # print(df.dtypes)
     # here the datatype of start time and end time is object (ie strings) in pandas
-    # convert to datetime
 
+    # convert to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
     
@@ -66,12 +66,14 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     
+    # apply month filter if applicable 
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
         
         df = df[df['month'] == month]
-        
+
+    # apply day filter if applicable
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
 
