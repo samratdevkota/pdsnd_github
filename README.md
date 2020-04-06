@@ -9,7 +9,7 @@ In this project, I make use of Python to explore data related to bike share syst
 
 ### Files used
 #### Software requirement:
-- You should have Python 3, NumPy, and pandas installed using Anaconda
+- Python 3, NumPy, and pandas installed using Anaconda
 - A text editor, like Sublime or Atom.
 - A terminal application (Terminal on Mac and Linux or Cygwin on Windows).
 
