@@ -180,13 +180,13 @@ def user_stats(df):
     try:  
         recent_birth = df['Birth Year'].max()
         print("Most recent year of birth is", recent_birth)
-    except:
+    except KeyError:
         print("Birth data is not available")
         
     try:
         common_birth_year = df['Birth Year'].value_counts().idxmax()
         print("Most common year of birth is", common_birth_year)
-    except:
+    except KeyError:
         print("Birth data is not available")
           
 
